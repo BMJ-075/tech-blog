@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/global.css";
+import BaseLayout from "@/layouts/baseLayout";
 
 export const metadata = {
   title: "Next.js",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <BaseLayout>{children}</BaseLayout>
+      </body>
     </html>
   );
 }
