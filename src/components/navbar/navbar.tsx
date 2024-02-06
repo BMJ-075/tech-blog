@@ -2,7 +2,7 @@ import React from "react";
 
 const NavBar = (): React.JSX.Element => {
   return (
-    <nav className="stick top-0 z-10 w-screen backdrop-blur-sm border-b-2 border-gray-300">
+    <nav className="stick top-0 z-10 backdrop-blur-sm border-b-2 border-gray-300">
       <div className="flex justify-between px-4 py-2">
         <div id="nav-left" className=" flex items-center text-gray-800">
           <div id="logo" className="px-2">

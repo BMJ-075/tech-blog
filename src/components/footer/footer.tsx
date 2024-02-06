@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = (): React.JSX.Element => {
   return (
-    <footer className="w-screen backdrop-blur-sm border-t-2 border-gray-300 flex justify-between items-center p-2 max-h-12">
+    <footer className="w-full backdrop-blur-sm border-t-2 border-gray-300 flex justify-between items-center p-2 max-h-12">
       <h4 className="font-bold text-gray-700 ">© 2024 Bhavya Jain </h4>
       <p className="font-semibold italic">Made with NextJs </p>
       <ul className="flex items-center">
