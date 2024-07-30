@@ -1,27 +1,78 @@
-import React from "react";
+import { FaDribbble, FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa";
 
-const Footer = (): React.JSX.Element => {
+import { Text } from "@/components/ui/custom/text";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+export const Footer = () => {
   return (
-    <footer className="w-full backdrop-blur-sm border-t-2 border-gray-300 flex justify-between items-center p-2 max-h-12">
-      <h4 className="font-bold text-gray-700 ">© 2024 Bhavya Jain </h4>
-      <p className="font-semibold italic">Made with NextJs </p>
-      <ul className="flex items-center">
-        <li className="px-2 hover:scale-105 hover:text-gray-900  font-medium transform transition-all ease-in">
-          <button>Home</button>
-        </li>
-        <li className="px-2 hover:scale-105 hover:text-gray-900  font-medium transform transition-all ease-in">
-          <button>About</button>
-        </li>
-        <li className="px-2 hover:scale-105 hover:text-gray-900  font-medium transform transition-all ease-in">
-          <button>Privacy Policy</button>
-        </li>
-        <li className="px-2 hover:scale-105 hover:text-gray-900  font-medium transform transition-all ease-in">
-          <button>Disclaimer</button>
-        </li>
-        <li className="px-2 hover:scale-105 hover:text-gray-900  font-medium transform transition-all ease-in">
-          <button>Terms and Conditions</button>
-        </li>
-      </ul>
+    <footer className="flex flex-col items-center justify-between bg-background px-10 py-5 md:flex-row">
+      <Text className="mb-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:mb-0">
+        &copy; 2019-2022&nbsp;
+        <a
+          href="https://modernui.com/"
+          rel="noreferrer"
+          target="_blank"
+          className="hover:underline"
+        >
+          ModernUI
+        </a>
+        . All rights reserved.
+      </Text>
+      <div className="flex items-center justify-center space-x-1">
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span className="cursor-pointer rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+                <FaFacebookF className="size-4" />
+              </span>
+            </TooltipTrigger>
+            <TooltipContent className="bg-background">
+              <Text>Like us on Facebook</Text>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span className="cursor-pointer rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+                <FaTwitter className="size-4" />
+              </span>
+            </TooltipTrigger>
+            <TooltipContent className="bg-background">
+              <Text>Follow us on Twitter</Text>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span className="cursor-pointer rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+                <FaGithub className="size-4" />
+              </span>
+            </TooltipTrigger>
+            <TooltipContent className="bg-background">
+              <Text>Star us on GitHub</Text>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span className="cursor-pointer rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+                <FaDribbble className="size-4" />
+              </span>
+            </TooltipTrigger>
+            <TooltipContent className="bg-background">
+              <Text>Follow us on Dribble</Text>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </div>
     </footer>
   );
 };

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const NavBar = (): React.JSX.Element => {
@@ -6,21 +7,27 @@ const NavBar = (): React.JSX.Element => {
       <div className="flex justify-between px-4 py-2">
         <div id="nav-left" className=" flex items-center text-gray-800">
           <div id="logo" className="px-2">
-            BMJ
+            <Link href={"/"}> BMJ</Link>
           </div>
           <ul className="flex px-2 items-center">
             <li className="px-2 hover:scale-105 hover:text-gray-900  font-medium transform transition-all ease-in">
-              <button>React</button>
+              <Link href={"/topic/React"}>React</Link>
             </li>
             <li>
-              <button className="px-2 hover:scale-105 hover:text-gray-900  font-medium transform transition-all ease-in">
+              <Link
+                href={"/topic/typescript"}
+                className="px-2 hover:scale-105 hover:text-gray-900  font-medium transform transition-all ease-in"
+              >
                 Typescript
-              </button>
+              </Link>
             </li>
             <li>
-              <button className="px-2 hover:scale-105 hover:text-gray-900  font-medium transform transition-all ease-in">
+              <Link
+                href={"/topic/Node"}
+                className="px-2 hover:scale-105 hover:text-gray-900  font-medium transform transition-all ease-in"
+              >
                 Node
-              </button>
+              </Link>
             </li>
           </ul>
         </div>
