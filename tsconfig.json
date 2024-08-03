@@ -121,6 +121,6 @@
     "next.config.js",
     "tailwind.config.js",
     "postcss.config.js"
-  ],
+, "src/components/relatedArticles"  ],
   "exclude": ["node_modules"]
 }

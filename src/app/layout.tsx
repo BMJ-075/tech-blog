@@ -1,12 +1,18 @@
 import React from "react";
 import "../styles/global.css";
 import BaseLayout from "@/layouts/baseLayout";
-import { Inter as FontSans } from "next/font/google";
+import { Inter as FontSans, Edu_VIC_WA_NT_Beginner } from "next/font/google";
+
 import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const logoFont = Edu_VIC_WA_NT_Beginner({
+  variable: "--font-edu",
+  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -24,7 +30,8 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
+          logoFont.variable
         )}
       >
         <BaseLayout>{children}</BaseLayout>
